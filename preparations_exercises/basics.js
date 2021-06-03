@@ -13,4 +13,5 @@ let pets = {
   pudding: 'cat',
   neptune: 'fish',
   darwin: 'lizard',
-};
+}; //above creates an object 'pets'
+
