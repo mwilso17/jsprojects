@@ -6,3 +6,11 @@ console.log(Number('5') + 10) //shows another way you can log this so that '5' i
 
 let petNames = ['asta', 'butterscotch', 'pudding', 'neptune', 'darwin'];
 //The code above creates an array that lists pet names
+
+let pets = {
+  asta: 'dog',
+  butterscotch: 'cat',
+  pudding: 'cat',
+  neptune: 'fish',
+  darwin: 'lizard',
+};
