@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--This program will create an analog clock using JavaScript that should be functional in all browsers-->
+<html>
+  <head>
+    <title>Analog Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <canvas id="analog-clock" width="400" height="400"></canvas>
+
+    <script>
+      var canvas = document.getElementById("analog-clock");
+      var context = canvas.getContext("2d");
+      var clockRadius = canvas.width/2;
+
+      context.beginPath();
+        context.arc(clockRadius, clockRadius, clockRadius, 0, 2*Math.PI);
+        context.fill();
+
+        context.font = clockRadius / 10 + "px arial";
+        context.fillStyle = "red";
+        context.textAlign = "center";
+        context.textBaseLine = "middle";
+        
+        for (var i = 1; i <= 12; i++) {
+          context.fillText(i, clockRadius + clockRadius * 0.9 *Math.sin(i * 2 * Math.PI / 12),
+          clockRadius - (clockRadius * 0.9 * Math.cos(i * 2 * Math.PI / 12)));
+        }
+    </script>
+
+
+  </body>
+</html>
