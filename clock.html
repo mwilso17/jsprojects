@@ -11,6 +11,10 @@
     <canvas id="analog-clock" width="400" height="400"></canvas>
 
     <script>
+
+
+
+
       var canvas = document.getElementById("analog-clock");
       var context = canvas.getContext("2d");
       var clockRadius = canvas.width/2;
@@ -37,7 +41,7 @@
 
         var hourHand = twelveHourClock * 2 * Math.PI / 12;
         var minuteHand = minutes * 2 * Math.PI / 60;
-        var secondhand = seconds * 2 * Math.PI / 60;
+        var secondHand = seconds * 2 * Math.PI / 60;
 
         context.strokeStyle = "red";
         context.lineWidth = 8;
@@ -51,11 +55,15 @@
         context.lineTo(clockRadius + clockRadius * 0.7 * Math.sin(minuteHand), clockRadius - (clockRadius * 0.7 * Math.cos(minuteHand)));
         context.stroke();
 
+
         context.strokeStyle = "red";
         context.lineWidth = 4;
         context.moveTo(clockRadius, clockRadius);
         context.lineTo(clockRadius + clockRadius * 0.9 * Math.sin(secondHand), clockRadius - (clockRadius * 0.9 * Math.cos(secondHand)));
         context.stroke();
+
+
+
 
     </script>
 
