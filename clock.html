@@ -13,13 +13,14 @@
     <script>
 
 
-
+        function analogClock() {
 
       var canvas = document.getElementById("analog-clock");
       var context = canvas.getContext("2d");
       var clockRadius = canvas.width/2;
 
         context.beginPath();
+        context.fillStyle = "black";
         context.arc(clockRadius, clockRadius, clockRadius, 0, 2 * Math.PI);
         context.fill();
 
@@ -62,6 +63,9 @@
         context.lineTo(clockRadius + clockRadius * 0.9 * Math.sin(secondHand), clockRadius - (clockRadius * 0.9 * Math.cos(secondHand)));
         context.stroke();
 
+      }
+
+      setInterval(analogClock, 1000);
 
 
 
